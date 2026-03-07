@@ -1,73 +1,71 @@
-# Welcome to your Lovable project
+# NU Communications Website
 
-## Project info
+A responsive, bilingual (DE/EN) single-page website for **NU Communications**, built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Quick Start
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Visit `http://localhost:5173` to view the site.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Tech Stack
 
-**Use GitHub Codespaces**
+- **React 18** with TypeScript
+- **Vite** for fast development and builds
+- **Tailwind CSS** with semantic design tokens
+- **Lucide React** for icons
+- **Vitest** for testing
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Features
 
-## What technologies are used for this project?
+- **Bilingual (DE/EN)** — Toggle between German and English via a button in the navigation. All text content is centralized in `src/data/translations.ts`.
+- **Responsive** — Mobile-first design with Tailwind breakpoints. Hamburger navigation on mobile, multi-column layouts on desktop.
+- **Accessible** — Semantic HTML (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`), skip-to-content link, ARIA labels, keyboard navigation, dynamic `lang` attribute on `<html>`.
+- **SEO** — Proper `<title>`, meta description, Open Graph tags, canonical URL, single `<h1>`, semantic heading hierarchy.
 
-This project is built with:
+## 📁 Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── assets/images/       # Photos extracted from presentation PDF
+├── components/
+│   ├── common/          # SectionHeading, DecorativeDots, LanguageToggle
+│   ├── layout/          # Header, Footer
+│   ├── sections/        # HeroSection, MissionSection, ServicesSection, etc.
+│   └── ui/              # shadcn/ui components
+├── context/             # LanguageContext (React context for DE/EN)
+├── data/                # translations.ts (all bilingual content)
+├── hooks/               # Custom hooks
+├── lib/                 # Utilities (cn helper)
+└── pages/               # Index, NotFound
+```
 
-## How can I deploy this project?
+## 🎨 Design System
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Colors are defined as HSL CSS variables in `src/index.css` and mapped in `tailwind.config.ts`:
 
-## Can I connect a custom domain to my Lovable project?
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--secondary` / `nu-charcoal` | `hsl(0 0% 18%)` | Dark sections, headings |
+| `--primary` / `nu-pink` | `hsl(340 82% 52%)` | Accent color, icons, borders |
+| `--background` | `hsl(0 0% 100%)` | Light sections |
+| `--muted` | `hsl(0 0% 96%)` | Alternating section backgrounds |
 
-Yes, you can!
+Typography: **Playfair Display** (headings) + **Source Sans 3** (body).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🚢 Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Click **Publish** in Lovable to deploy instantly. For self-hosting:
+
+```bash
+npm run build
+# Serve the `dist/` folder with any static file server
+```
+
+## 📄 Further Documentation
+
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — Component tree, data flow, design decisions
+- [CONTRIBUTING.md](./CONTRIBUTING.md) — Code style, adding languages, component guidelines
