@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import MissionSection from "@/components/sections/MissionSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
+import AwardSection from "@/components/sections/AwardSection";
+import ContactSection from "@/components/sections/ContactSection";
 
+/** Main single-page layout for NU Communications website */
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      {/* Skip to content for keyboard users */}
+      <a href="#about" className="skip-link">
+        Skip to content
+      </a>
+
+      <Header />
+
+      <main id="main-content">
+        <HeroSection />
+        <MissionSection />
+        <ServicesSection />
+        <ProjectsSection />
+        <AwardSection />
+        <ContactSection />
+      </main>
+
+      <Footer />
+    </>
   );
 };
 
