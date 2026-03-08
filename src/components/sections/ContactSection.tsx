@@ -26,7 +26,7 @@ const ContactSection: React.FC = () => {
         <div className="hidden lg:block flex-1 bg-background" />
       </div>
 
-      <div className="relative z-10 w-full lg:min-h-screen lg:flex lg:items-center">
+      <div className="relative z-10 w-full flex-1 lg:flex lg:items-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr] gap-10 lg:gap-16 items-center">
             {/* Contact details — dark side */}
