@@ -3,7 +3,7 @@ import SectionHeading from "@/components/common/SectionHeading";
 import DecorativeDots from "@/components/common/DecorativeDots";
 import DecorativeTriangle from "@/components/common/DecorativeTriangle";
 import { Phone, Globe, Mail, MapPin } from "lucide-react";
-import contactImg1 from "@/assets/images/Screenshot 2025-07-02 at 22.35.29.png";
+import contactImg1 from "@/assets/images/contact_collage.png";
 import contactImg2 from "@/assets/images/photo_schwarzenegger_foundation.png";
 import contactImg3 from "@/assets/images/photo_natasha_and_jane_goodall.png";
 
