@@ -1,46 +1,47 @@
 import { useLanguage } from "@/context/LanguageContext";
-import missionImg from "@/assets/images/mission_banner.png";
+import DecorativeDots from "@/components/common/DecorativeDots";
+import missionBanner from "@/assets/images/mission_banner.png";
 
-/** Mission section — full-width image with quote overlay */
+/** Mission section — banner image with quote box below */
 const MissionSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section
-      id="mission"
-      aria-label={t.nav.mission}
-      className="relative min-h-[60vh] flex items-center"
-    >
-      {/* Background image */}
-      <div className="absolute inset-0">
+    <section id="mission" aria-label={t.nav.mission} className="relative">
+      {/* Banner image */}
+      <div className="w-full">
         <img
-          src={missionImg}
+          src={missionBanner}
           alt={t.alt.mission}
-          className="w-full h-full object-cover"
+          className="w-full h-auto object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-secondary/60" />
       </div>
 
       {/* Quote box */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 py-16">
-        <div className="max-w-2xl bg-secondary/90 p-8 md:p-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            {t.mission.heading}
-          </h2>
-          <blockquote className="relative">
-            <span className="text-primary text-6xl font-serif absolute -top-4 -left-2 leading-none" aria-hidden="true">
+      <div className="bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8 py-12 md:py-16">
+          <div className="max-w-3xl mx-auto flex items-start gap-6 md:gap-10">
+            {/* Opening quote mark */}
+            <span className="text-primary text-7xl md:text-8xl font-serif leading-none flex-shrink-0 -mt-2" aria-hidden="true">
               &ldquo;
             </span>
-            <p className="font-sans text-primary-foreground/90 leading-relaxed text-lg pl-6">
+
+            {/* Quote text */}
+            <p className="font-serif italic text-primary-foreground text-lg md:text-xl lg:text-2xl leading-relaxed text-center">
               {t.mission.quote}
             </p>
-            <span className="text-primary text-6xl font-serif leading-none" aria-hidden="true">
+
+            {/* Closing quote mark */}
+            <span className="text-primary text-7xl md:text-8xl font-serif leading-none flex-shrink-0 self-end -mb-2" aria-hidden="true">
               &rdquo;
             </span>
-          </blockquote>
+          </div>
         </div>
       </div>
+
+      {/* Decorative dots bottom-left */}
+      <DecorativeDots className="absolute -bottom-8 left-4 hidden lg:grid" rows={5} cols={8} />
     </section>
   );
 };
