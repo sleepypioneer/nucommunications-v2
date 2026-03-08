@@ -1,7 +1,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
 import DecorativeDots from "@/components/common/DecorativeDots";
-import awardImg from "@/assets/images/award.jpg";
+import awardImg from "@/assets/images/photo_eu_commission_2014.png";
 
 /** Award section — split layout with photos and description */
 const AwardSection: React.FC = () => {

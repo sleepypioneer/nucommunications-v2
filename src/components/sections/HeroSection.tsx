@@ -1,7 +1,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
 import DecorativeDots from "@/components/common/DecorativeDots";
-import portraitImg from "@/assets/images/portrait.jpg";
+import portraitImg from "@/assets/images/natasha_headshot.png";
 
 /** Hero / About Me section — split layout with portrait and bio */
 const HeroSection: React.FC = () => {
