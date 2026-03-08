@@ -19,19 +19,17 @@ const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" aria-label={t.nav.contact} className="min-h-screen relative overflow-hidden flex items-center">
-      {/* Split background */}
+      {/* Split background — dark takes ~1/3 */}
       <div className="absolute inset-0 flex">
-        <div className="w-full lg:w-1/2 bg-secondary" />
-        <div className="hidden lg:block w-1/2 bg-background" />
+        <div className="w-full lg:w-[35%] bg-secondary" />
+        <div className="hidden lg:block w-[65%] bg-background" />
       </div>
 
-      <div className="relative z-10">
-        
-
+      <div className="relative z-10 w-full">
         <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr] gap-16 items-center">
             {/* Contact details — dark side */}
-            <div className="text-secondary-foreground">
+            <div className="text-secondary-foreground lg:pl-4">
               <SectionHeading light>{t.contact.heading}</SectionHeading>
 
               <address className="not-italic space-y-6 font-sans mt-10">
@@ -62,31 +60,29 @@ const ContactSection: React.FC = () => {
               </address>
             </div>
 
-            {/* Photo collage — light side */}
+            {/* Photo collage — light side, larger photos */}
             <div className="relative">
-              <div className="grid grid-cols-2 gap-3">
-                {/* Large photo spanning full width */}
+              <div className="grid grid-cols-2 gap-4">
                 <img
                   src={contactImg1}
                   alt={t.alt.contact}
-                  className="col-span-2 w-full h-56 object-cover shadow-lg"
+                  className="col-span-2 w-full h-72 object-cover shadow-lg"
                   loading="lazy"
                 />
-                {/* Two smaller photos below */}
                 <img
                   src={contactImg2}
                   alt={t.alt.contact}
-                  className="w-full h-48 object-cover shadow-lg"
+                  className="w-full h-60 object-cover shadow-lg"
                   loading="lazy"
                 />
                 <img
                   src={contactImg3}
                   alt={t.alt.contact}
-                  className="w-full h-48 object-cover shadow-lg"
+                  className="w-full h-60 object-cover shadow-lg"
                   loading="lazy"
                 />
               </div>
-              <DecorativeDots className="absolute -right-4 top-1/2 -translate-y-1/2 hidden lg:grid" rows={8} cols={3} />
+              <DecorativeDots className="absolute -right-10 top-1/2 -translate-y-1/2 hidden lg:grid" rows={6} cols={3} />
             </div>
           </div>
         </div>
