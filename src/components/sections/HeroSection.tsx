@@ -10,8 +10,9 @@ const HeroSection: React.FC = () => {
 
   return (
     <section id="about" aria-label={t.nav.about} className="min-h-screen pt-24 pb-16 lg:pb-24 relative overflow-hidden flex items-center">
+      <DecorativeDots className="absolute top-28 left-6 hidden lg:grid" rows={4} cols={6} />
+      <DecorativeDots className="absolute top-28 right-6 hidden lg:grid" rows={4} cols={6} />
       <div className="container mx-auto px-4 lg:px-8">
-        <DecorativeDots className="absolute top-0 right-8 hidden lg:grid" rows={3} cols={6} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Portrait */}
