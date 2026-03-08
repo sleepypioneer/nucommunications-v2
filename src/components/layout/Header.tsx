@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageToggle from "@/components/common/LanguageToggle";
+import ThemeToggle from "@/components/common/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import nuLogo from "@/assets/images/nu-logo.svg";
 
@@ -35,6 +36,9 @@ const Header: React.FC = () => {
               </li>
             ))}
             <li>
+              <ThemeToggle />
+            </li>
+            <li>
               <LanguageToggle />
             </li>
           </ul>
@@ -42,6 +46,7 @@ const Header: React.FC = () => {
 
         {/* Mobile toggle */}
         <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
           <LanguageToggle />
           <button
             onClick={() => setOpen(!open)}
