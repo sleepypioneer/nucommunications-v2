@@ -1,5 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
+import Footer from "@/components/layout/Footer";
 import DecorativeDots from "@/components/common/DecorativeDots";
 import DecorativeTriangle from "@/components/common/DecorativeTriangle";
 import { Phone, Globe, Mail, MapPin } from "lucide-react";
