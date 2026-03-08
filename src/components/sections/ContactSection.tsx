@@ -19,7 +19,7 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" aria-label={t.nav.contact} className="relative overflow-hidden lg:min-h-screen">
+    <section id="contact" aria-label={t.nav.contact} className="relative overflow-hidden lg:min-h-screen flex flex-col">
       {/* Split background — dark takes full on mobile, ~45% on desktop */}
       <div className="absolute inset-0 flex flex-col lg:flex-row">
         <div className="w-full lg:w-[45%] bg-secondary flex-1 lg:flex-none" />
