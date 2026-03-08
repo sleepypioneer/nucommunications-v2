@@ -18,38 +18,38 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" aria-label={t.nav.contact} className="min-h-screen relative overflow-hidden flex items-center">
-      {/* Split background — dark takes ~1/3 */}
-      <div className="absolute inset-0 flex">
-        <div className="w-full lg:w-[35%] bg-secondary" />
-        <div className="hidden lg:block w-[65%] bg-background" />
+    <section id="contact" aria-label={t.nav.contact} className="relative overflow-hidden">
+      {/* Split background — dark takes full on mobile, ~1/3 on desktop */}
+      <div className="absolute inset-0 flex flex-col lg:flex-row">
+        <div className="h-auto min-h-[60%] lg:min-h-0 lg:h-auto w-full lg:w-[35%] bg-secondary" />
+        <div className="flex-1 bg-background" />
       </div>
 
       <div className="relative z-10 w-full">
-        <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr] gap-16 items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr] gap-10 lg:gap-16 items-center">
             {/* Contact details — dark side */}
             <div className="text-secondary-foreground lg:pl-4">
               <SectionHeading light>{t.contact.heading}</SectionHeading>
 
-              <address className="not-italic space-y-6 font-sans mt-10">
+              <address className="not-italic space-y-5 sm:space-y-6 font-sans mt-8 sm:mt-10 text-sm sm:text-base">
                 {contactItems.map(({ icon: Icon, value, href, external }, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <span className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                      <Icon className="text-primary-foreground" size={18} aria-hidden="true" />
+                  <div key={i} className="flex items-center gap-3 sm:gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center">
+                      <Icon className="text-primary-foreground" size={16} aria-hidden="true" />
                     </span>
                     <a
                       href={href}
                       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="hover:text-primary transition-colors"
+                      className="hover:text-primary transition-colors break-all sm:break-normal"
                     >
                       {value}
                     </a>
                   </div>
                 ))}
-                <div className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center mt-0.5">
-                    <MapPin className="text-primary-foreground" size={18} aria-hidden="true" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <span className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center mt-0.5">
+                    <MapPin className="text-primary-foreground" size={16} aria-hidden="true" />
                   </span>
                   <div className="space-y-1">
                     {t.contact.addresses.map((addr, i) => (
@@ -60,25 +60,25 @@ const ContactSection: React.FC = () => {
               </address>
             </div>
 
-            {/* Photo collage — light side, larger photos */}
+            {/* Photo collage — light side */}
             <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-2 sm:gap-4">
                 <img
                   src={contactImg1}
                   alt={t.alt.contact}
-                  className="col-span-2 w-full h-72 object-cover shadow-lg"
+                  className="col-span-2 w-full aspect-[16/9] sm:aspect-[16/7] object-cover shadow-lg"
                   loading="lazy"
                 />
                 <img
                   src={contactImg2}
                   alt={t.alt.contact}
-                  className="w-full h-60 object-cover shadow-lg"
+                  className="w-full aspect-[4/3] object-cover shadow-lg"
                   loading="lazy"
                 />
                 <img
                   src={contactImg3}
                   alt={t.alt.contact}
-                  className="w-full h-60 object-cover shadow-lg"
+                  className="w-full aspect-[4/3] object-cover shadow-lg"
                   loading="lazy"
                 />
               </div>
