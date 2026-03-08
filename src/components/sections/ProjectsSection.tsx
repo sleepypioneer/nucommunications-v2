@@ -15,10 +15,8 @@ const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" aria-label={t.nav.projects} className="py-16 lg:py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="relative">
-          <DecorativeDots className="absolute -top-2 left-0 hidden lg:grid" rows={4} cols={8} />
-          <SectionHeading className="text-center mx-auto">{t.projects.heading}</SectionHeading>
-          <DecorativeDots className="absolute -top-2 right-0 hidden lg:grid" rows={4} cols={8} />
+        <div className="text-center">
+          <SectionHeading className="mx-auto">{t.projects.heading}</SectionHeading>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

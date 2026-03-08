@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
   return (
     <section id="about" aria-label={t.nav.about} className="pt-24 pb-16 lg:pb-24 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        <DecorativeDots className="absolute top-20 left-1/2 -translate-x-1/2 hidden lg:grid" rows={3} cols={10} />
+        <DecorativeDots className="absolute top-0 right-8 hidden lg:grid" rows={3} cols={6} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Portrait */}
