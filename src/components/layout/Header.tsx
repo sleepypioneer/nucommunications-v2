@@ -19,7 +19,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-8">
         {/* Logo / Brand */}
         <a href="#about" aria-label="NU Communications — Home">
-          <img src={nuLogo} alt="NU Communications" className="h-10" />
+          <img src={nuLogo} alt="NU Communications" className="h-10 dark:invert" />
         </a>
 
         {/* Desktop nav */}

@@ -11,7 +11,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ children, className, li
   <h2
     className={cn(
       "font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-8 relative inline-block",
-      light ? "text-primary-foreground" : "text-secondary",
+      light ? "text-primary-foreground" : "text-foreground",
       className
     )}
   >

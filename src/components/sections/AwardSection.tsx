@@ -35,7 +35,7 @@ const AwardSection: React.FC = () => {
           {/* Text */}
           <div>
             <SectionHeading>{t.award.heading}</SectionHeading>
-            <h3 className="font-serif text-xl font-bold text-secondary mt-8 mb-4">{t.award.title}</h3>
+            <h3 className="font-serif text-xl font-bold text-foreground mt-8 mb-4">{t.award.title}</h3>
             <div className="space-y-4 font-sans text-foreground leading-relaxed">
               {t.award.paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
