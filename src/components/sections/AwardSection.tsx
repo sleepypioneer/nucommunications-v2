@@ -1,27 +1,35 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
 import DecorativeDots from "@/components/common/DecorativeDots";
-import awardImg from "@/assets/images/photo_eu_commission_2014.png";
+import DecorativeTriangle from "@/components/common/DecorativeTriangle";
+import awardImg1 from "@/assets/images/photo_eu_commission_2014.png";
+import awardImg2 from "@/assets/images/photo_eu_commission_2014_2.png";
 
-/** Award section — split layout with photos and description */
+/** Award section — two stacked photos left, text right, matching PDF reference */
 const AwardSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="award" aria-label={t.nav.award} className="py-16 lg:py-24 bg-muted">
+    <section id="award" aria-label={t.nav.award} className="py-16 lg:py-24 relative overflow-hidden">
+      <DecorativeDots className="absolute top-8 left-1/2 -translate-x-1/2 hidden lg:grid" rows={3} cols={10} />
+
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image */}
-          <div className="relative">
-            <figure>
-              <img
-                src={awardImg}
-                alt={t.alt.award}
-                className="w-full object-cover shadow-lg"
-                loading="lazy"
-              />
-            </figure>
-            <DecorativeDots className="absolute -top-6 -left-4 hidden lg:grid" rows={4} cols={4} />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Two stacked photos */}
+          <div className="relative space-y-4">
+            <img
+              src={awardImg1}
+              alt={t.alt.award}
+              className="w-full object-cover shadow-lg"
+              loading="lazy"
+            />
+            <img
+              src={awardImg2}
+              alt={t.alt.award}
+              className="w-full object-cover shadow-lg"
+              loading="lazy"
+            />
+            <DecorativeDots className="absolute -bottom-8 -left-4 hidden lg:grid" rows={5} cols={6} />
           </div>
 
           {/* Text */}
@@ -36,6 +44,8 @@ const AwardSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <DecorativeTriangle className="bottom-0 right-0" size={100} />
     </section>
   );
 };

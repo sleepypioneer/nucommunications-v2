@@ -1,6 +1,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
 import DecorativeDots from "@/components/common/DecorativeDots";
+import DecorativeTriangle from "@/components/common/DecorativeTriangle";
 import portraitImg from "@/assets/images/natasha_headshot.png";
 
 /** Hero / About Me section — split layout with portrait and bio */
@@ -8,8 +9,10 @@ const HeroSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" aria-label={t.nav.about} className="pt-24 pb-16 lg:pb-24">
+    <section id="about" aria-label={t.nav.about} className="pt-24 pb-16 lg:pb-24 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
+        <DecorativeDots className="absolute top-20 left-1/2 -translate-x-1/2 hidden lg:grid" rows={3} cols={10} />
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Portrait */}
           <div className="relative">
@@ -21,7 +24,7 @@ const HeroSection: React.FC = () => {
                 loading="eager"
               />
             </figure>
-            <DecorativeDots className="absolute -bottom-6 -right-4 hidden lg:grid" rows={5} cols={5} />
+            <DecorativeDots className="absolute -bottom-6 -left-4 hidden lg:grid" rows={5} cols={5} />
           </div>
 
           {/* Bio text */}
@@ -35,6 +38,8 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <DecorativeTriangle className="bottom-0 right-0" size={100} />
     </section>
   );
 };
