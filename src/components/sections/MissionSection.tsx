@@ -1,5 +1,5 @@
 import { useLanguage } from "@/context/LanguageContext";
-import missionImg from "@/assets/images/mission.jpg";
+import missionImg from "@/assets/images/mission_banner.png";
 
 /** Mission section — full-width image with quote overlay */
 const MissionSection: React.FC = () => {

@@ -1,6 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
-import contactImg from "@/assets/images/contact.jpg";
+import contactImg from "@/assets/images/photo_natasha_and_jane_goodall.png";
 import { Phone, Globe, Mail, MapPin } from "lucide-react";
 
 /** Contact section — dark background with contact details and photo */

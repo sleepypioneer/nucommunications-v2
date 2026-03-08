@@ -1,6 +1,10 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
-import projectsImg from "@/assets/images/projects.jpg";
+import fundraisingImg from "@/assets/images/fundraising_for_climate_actions_2023_2024.png";
+import summitImg from "@/assets/images/austrian_world_summit_2023_and_2024.png";
+import organicsImg from "@/assets/images/eu_organics_award.png";
+
+const projectImages = [fundraisingImg, summitImg, organicsImg];
 
 /** Reference Projects — 3-column card layout */
 const ProjectsSection: React.FC = () => {
@@ -16,8 +20,8 @@ const ProjectsSection: React.FC = () => {
             <article key={i} className="group">
               <div className="overflow-hidden mb-4">
                 <img
-                  src={projectsImg}
-                  alt={t.alt.projects}
+                  src={projectImages[i]}
+                  alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />
