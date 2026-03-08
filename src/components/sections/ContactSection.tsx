@@ -90,6 +90,11 @@ const ContactSection: React.FC = () => {
       </div>
 
       <DecorativeTriangle className="bottom-0 right-0" size={100} />
+
+      {/* Footer integrated into contact section */}
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </section>
   );
 };
