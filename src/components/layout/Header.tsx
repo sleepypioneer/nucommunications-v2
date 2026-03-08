@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageToggle from "@/components/common/LanguageToggle";
 import { Menu, X } from "lucide-react";
+import nuLogo from "@/assets/images/nu-logo.svg";
 
 const navIds = ["about", "mission", "services", "projects", "award", "contact"] as const;
 
