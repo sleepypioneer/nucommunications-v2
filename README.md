@@ -58,12 +58,45 @@ Typography: **Playfair Display** (headings) + **Source Sans 3** (body).
 
 ## 🚢 Deployment
 
-Click **Publish** in Lovable to deploy instantly. For self-hosting:
+### Option 1: Lovable Publish
+
+Click **Publish** in Lovable to deploy instantly — no configuration needed.
+
+### Option 2: GitHub Pages (automated)
+
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys to GitHub Pages on every push to `main`.
+
+**Setup steps:**
+
+1. Push this repository to GitHub (Lovable does this automatically when connected).
+2. In your GitHub repo, go to **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. The next push to `main` will trigger the workflow and deploy the site.
+
+Your site will be available at `https://<username>.github.io/<repo-name>/`.
+
+> **Custom domain:** To use a custom domain (e.g. `www.nucommunications.at`), go to **Settings → Pages → Custom domain** and add your domain. You'll also need to configure DNS (CNAME record pointing to `<username>.github.io`).
+
+### Option 3: Manual / other hosting
 
 ```bash
-npm run build
-# Serve the `dist/` folder with any static file server
+bun install
+bun run build
+# Serve the `dist/` folder with any static file server (Netlify, Vercel, Cloudflare Pages, etc.)
 ```
+
+## 🔧 CI Pipeline
+
+The CI workflow (`.github/workflows/ci.yml`) runs on every push and PR to `main`:
+
+| Step | Command | Description |
+|------|---------|-------------|
+| Lint | `bun run lint` | ESLint checks |
+| Type Check | `bunx tsc --noEmit` | TypeScript validation |
+| Tests | `bun test` | Vitest unit tests |
+| Build | `bun run build` | Production build verification |
+
+All four steps must pass before merging.
 
 ## 📄 Further Documentation
 
