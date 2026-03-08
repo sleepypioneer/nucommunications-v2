@@ -113,6 +113,11 @@
     @apply bg-background text-foreground font-sans;
   }
 
+  /* Offset fixed header when scrolling to hash targets */
+  section[id] {
+    scroll-margin-top: 4rem;
+  }
+
   h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
   }

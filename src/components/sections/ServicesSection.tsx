@@ -14,7 +14,7 @@ const ServicesSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="services" aria-label={t.nav.services} className="min-h-screen py-16 lg:py-24 bg-background relative overflow-hidden flex items-center">
+    <section id="services" aria-label={t.nav.services} className="py-12 sm:py-16 lg:py-24 bg-background relative overflow-hidden">
       <DecorativeDots className="absolute top-24 left-6 hidden lg:grid" rows={4} cols={6} />
       <DecorativeDots className="absolute top-24 right-6 hidden lg:grid" rows={4} cols={6} />
       <div className="container mx-auto px-4 lg:px-8">

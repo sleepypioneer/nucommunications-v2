@@ -10,7 +10,7 @@ const AwardSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="award" aria-label={t.nav.award} className="min-h-screen py-16 lg:py-24 relative overflow-hidden flex items-center">
+    <section id="award" aria-label={t.nav.award} className="py-12 sm:py-16 lg:py-24 relative overflow-hidden">
       <DecorativeDots className="absolute top-8 right-8 hidden lg:grid" rows={3} cols={5} />
 
       <div className="container mx-auto px-4 lg:px-8">
