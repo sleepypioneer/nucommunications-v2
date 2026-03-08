@@ -1,5 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import DecorativeDots from "@/components/common/DecorativeDots";
+import DecorativeTriangle from "@/components/common/DecorativeTriangle";
 import missionBanner from "@/assets/images/mission_banner.png";
 
 /** Mission section — banner image with quote box below */
