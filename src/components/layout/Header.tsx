@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageToggle from "@/components/common/LanguageToggle";
+import ThemeToggle from "@/components/common/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import nuLogo from "@/assets/images/nu-logo.svg";
 
