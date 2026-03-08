@@ -1,5 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import DecorativeDots from "@/components/common/DecorativeDots";
+import DecorativeTriangle from "@/components/common/DecorativeTriangle";
 import missionBanner from "@/assets/images/mission_banner.png";
 
 /** Mission section — banner image with quote box below */
@@ -42,6 +43,7 @@ const MissionSection: React.FC = () => {
 
       {/* Decorative dots bottom-left */}
       <DecorativeDots className="absolute -bottom-8 left-4 hidden lg:grid" rows={5} cols={8} />
+      <DecorativeTriangle className="bottom-0 right-0" size={100} />
     </section>
   );
 };

@@ -1,38 +1,47 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
 import DecorativeDots from "@/components/common/DecorativeDots";
-import { Lightbulb, Newspaper, PenTool, CalendarDays } from "lucide-react";
+import DecorativeTriangle from "@/components/common/DecorativeTriangle";
+import iconStrategy from "@/assets/images/Screenshot 2025-07-02 at 22.34.05.png";
+import iconMedia from "@/assets/images/icon_media.png";
+import iconContent from "@/assets/images/icon_content_and_storytelling.png";
+import iconEvents from "@/assets/images/icon_events.png";
 
-const icons = [Lightbulb, Newspaper, PenTool, CalendarDays];
+const serviceIcons = [iconStrategy, iconMedia, iconContent, iconEvents];
 
-/** Services / Mein Angebot — 2x2 grid with icons */
+/** Services / Mein Angebot — 2x2 grid with icon images, matching PDF reference */
 const ServicesSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="services" aria-label={t.nav.services} className="py-16 lg:py-24 bg-muted">
+    <section id="services" aria-label={t.nav.services} className="py-16 lg:py-24 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="relative text-center mb-12">
+          <DecorativeDots className="absolute top-0 left-0 hidden lg:grid" rows={4} cols={8} />
           <SectionHeading className="mx-auto">{t.services.heading}</SectionHeading>
+          <DecorativeDots className="absolute top-0 right-0 hidden lg:grid" rows={4} cols={8} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto relative">
-          {t.services.items.map((item, i) => {
-            const Icon = icons[i];
-            return (
-              <article
-                key={i}
-                className="bg-background p-8 shadow-sm hover:shadow-md transition-shadow border-t-4 border-primary"
-              >
-                <Icon className="text-primary mb-4" size={36} aria-hidden="true" />
-                <h3 className="font-serif text-xl font-bold text-secondary mb-3">{item.title}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-5xl mx-auto">
+          {t.services.items.map((item, i) => (
+            <article key={i} className="flex gap-6 items-start">
+              <img
+                src={serviceIcons[i]}
+                alt=""
+                className="w-20 h-20 flex-shrink-0 object-contain"
+                aria-hidden="true"
+                loading="lazy"
+              />
+              <div>
+                <h3 className="font-serif text-lg font-bold text-primary mb-2">{item.title}</h3>
                 <p className="font-sans text-foreground leading-relaxed text-sm">{item.description}</p>
-              </article>
-            );
-          })}
-          <DecorativeDots className="absolute -bottom-10 right-0 hidden lg:grid" rows={3} cols={8} />
+              </div>
+            </article>
+          ))}
         </div>
       </div>
+
+      <DecorativeTriangle className="bottom-0 right-0" size={100} />
     </section>
   );
 };

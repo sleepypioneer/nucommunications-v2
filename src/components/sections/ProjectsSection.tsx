@@ -1,40 +1,45 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
+import DecorativeDots from "@/components/common/DecorativeDots";
+import DecorativeTriangle from "@/components/common/DecorativeTriangle";
 import fundraisingImg from "@/assets/images/fundraising_for_climate_actions_2023_2024.png";
 import summitImg from "@/assets/images/austrian_world_summit_2023_and_2024.png";
 import organicsImg from "@/assets/images/eu_organics_award.png";
 
 const projectImages = [fundraisingImg, summitImg, organicsImg];
 
-/** Reference Projects — 3-column card layout */
+/** Reference Projects — 3-column card layout matching PDF reference */
 const ProjectsSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" aria-label={t.nav.projects} className="py-16 lg:py-24">
+    <section id="projects" aria-label={t.nav.projects} className="py-16 lg:py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        <SectionHeading>{t.projects.heading}</SectionHeading>
+        <div className="relative">
+          <DecorativeDots className="absolute -top-2 left-0 hidden lg:grid" rows={4} cols={8} />
+          <SectionHeading className="text-center mx-auto">{t.projects.heading}</SectionHeading>
+          <DecorativeDots className="absolute -top-2 right-0 hidden lg:grid" rows={4} cols={8} />
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {t.projects.items.map((project, i) => (
-            <article key={i} className="group">
-              <div className="overflow-hidden mb-4">
+            <article key={i} className="group text-center">
+              <div className="overflow-hidden mb-6">
                 <img
                   src={projectImages[i]}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />
               </div>
-              <p className="font-sans text-xs uppercase tracking-wider text-primary font-semibold mb-1">
-                {project.subtitle}
-              </p>
-              <h3 className="font-serif text-lg font-bold text-secondary mb-2">{project.title}</h3>
+              <h3 className="font-serif text-lg font-bold text-primary mb-3">{project.title}</h3>
               <p className="font-sans text-sm text-foreground leading-relaxed">{project.description}</p>
             </article>
           ))}
         </div>
       </div>
+
+      <DecorativeTriangle className="bottom-0 right-0" size={100} />
     </section>
   );
 };
