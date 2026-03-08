@@ -13,7 +13,7 @@ const ProjectsSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" aria-label={t.nav.projects} className="py-12 sm:py-16 lg:py-24 relative overflow-hidden">
+    <section id="projects" aria-label={t.nav.projects} className="py-12 sm:py-16 lg:min-h-screen lg:py-24 relative overflow-hidden flex flex-col justify-center">
       <DecorativeDots className="absolute top-24 left-6 hidden lg:grid" rows={4} cols={6} />
       <DecorativeDots className="absolute top-24 right-6 hidden lg:grid" rows={4} cols={6} />
       <div className="container mx-auto px-4 lg:px-8">

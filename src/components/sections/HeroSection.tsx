@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" aria-label={t.nav.about} className="min-h-screen pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pb-24 relative overflow-hidden flex items-center">
+    <section id="about" aria-label={t.nav.about} className="pt-20 pb-12 sm:pt-24 sm:pb-16 lg:min-h-screen lg:pb-24 relative overflow-hidden flex items-center">
       <DecorativeDots className="absolute top-28 left-6 hidden lg:grid" rows={4} cols={6} />
       <DecorativeDots className="absolute top-28 right-6 hidden lg:grid" rows={4} cols={6} />
       <div className="container mx-auto px-4 lg:px-8">
