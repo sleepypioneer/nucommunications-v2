@@ -17,8 +17,8 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-8">
         {/* Logo / Brand */}
-        <a href="#about" className="font-serif text-xl font-bold text-secondary tracking-wider">
-          <span className="text-primary">NU</span> Communications
+        <a href="#about" aria-label="NU Communications — Home">
+          <img src={nuLogo} alt="NU Communications" className="h-10" />
         </a>
 
         {/* Desktop nav */}
