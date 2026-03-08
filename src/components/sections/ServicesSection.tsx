@@ -15,6 +15,8 @@ const ServicesSection: React.FC = () => {
 
   return (
     <section id="services" aria-label={t.nav.services} className="min-h-screen py-16 lg:py-24 bg-background relative overflow-hidden flex items-center">
+      <DecorativeDots className="absolute top-12 left-6 hidden lg:grid" rows={4} cols={6} />
+      <DecorativeDots className="absolute top-12 right-6 hidden lg:grid" rows={4} cols={6} />
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
           <SectionHeading className="mx-auto">{t.services.heading}</SectionHeading>
