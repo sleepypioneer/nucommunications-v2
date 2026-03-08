@@ -11,7 +11,7 @@ const AwardSection: React.FC = () => {
 
   return (
     <section id="award" aria-label={t.nav.award} className="py-16 lg:py-24 relative overflow-hidden">
-      <DecorativeDots className="absolute top-8 left-1/2 -translate-x-1/2 hidden lg:grid" rows={3} cols={10} />
+      <DecorativeDots className="absolute top-8 right-8 hidden lg:grid" rows={3} cols={5} />
 
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

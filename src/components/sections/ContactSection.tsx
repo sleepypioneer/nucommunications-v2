@@ -26,7 +26,7 @@ const ContactSection: React.FC = () => {
       </div>
 
       <div className="relative z-10">
-        <DecorativeDots className="absolute top-8 left-1/2 -translate-x-1/2 hidden lg:grid" rows={3} cols={10} />
+        
 
         <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
