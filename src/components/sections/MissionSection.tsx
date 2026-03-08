@@ -8,7 +8,7 @@ const MissionSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="mission" aria-label={t.nav.mission} className="relative">
+    <section id="mission" aria-label={t.nav.mission} className="min-h-screen relative flex flex-col justify-center">
       {/* Banner image */}
       <div className="w-full">
         <img

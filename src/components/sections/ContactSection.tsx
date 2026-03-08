@@ -18,7 +18,7 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" aria-label={t.nav.contact} className="relative overflow-hidden">
+    <section id="contact" aria-label={t.nav.contact} className="min-h-screen relative overflow-hidden flex items-center">
       {/* Split background */}
       <div className="absolute inset-0 flex">
         <div className="w-full lg:w-1/2 bg-secondary" />

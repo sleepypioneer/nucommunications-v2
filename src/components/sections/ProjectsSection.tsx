@@ -13,7 +13,7 @@ const ProjectsSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" aria-label={t.nav.projects} className="py-16 lg:py-24 relative overflow-hidden">
+    <section id="projects" aria-label={t.nav.projects} className="min-h-screen py-16 lg:py-24 relative overflow-hidden flex items-center">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center">
           <SectionHeading className="mx-auto">{t.projects.heading}</SectionHeading>

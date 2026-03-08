@@ -14,7 +14,7 @@ const ServicesSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="services" aria-label={t.nav.services} className="py-16 lg:py-24 bg-background relative overflow-hidden">
+    <section id="services" aria-label={t.nav.services} className="min-h-screen py-16 lg:py-24 bg-background relative overflow-hidden flex items-center">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
           <SectionHeading className="mx-auto">{t.services.heading}</SectionHeading>
