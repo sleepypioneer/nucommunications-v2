@@ -1,5 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
+import Footer from "@/components/layout/Footer";
 import DecorativeDots from "@/components/common/DecorativeDots";
 import DecorativeTriangle from "@/components/common/DecorativeTriangle";
 import { Phone, Globe, Mail, MapPin } from "lucide-react";
@@ -18,14 +19,14 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" aria-label={t.nav.contact} className="relative overflow-hidden lg:min-h-screen">
+    <section id="contact" aria-label={t.nav.contact} className="relative overflow-hidden lg:min-h-screen flex flex-col">
       {/* Split background — dark takes full on mobile, ~45% on desktop */}
       <div className="absolute inset-0 flex flex-col lg:flex-row">
         <div className="w-full lg:w-[45%] bg-secondary flex-1 lg:flex-none" />
         <div className="hidden lg:block flex-1 bg-background" />
       </div>
 
-      <div className="relative z-10 w-full lg:min-h-screen lg:flex lg:items-center">
+      <div className="relative z-10 w-full flex-1 lg:flex lg:items-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr] gap-10 lg:gap-16 items-center">
             {/* Contact details — dark side */}
@@ -89,6 +90,11 @@ const ContactSection: React.FC = () => {
       </div>
 
       <DecorativeTriangle className="bottom-0 right-0" size={100} />
+
+      {/* Footer integrated into contact section */}
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </section>
   );
 };
