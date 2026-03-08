@@ -14,8 +14,8 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <section id="projects" aria-label={t.nav.projects} className="min-h-screen py-16 lg:py-24 relative overflow-hidden flex items-center">
-      <DecorativeDots className="absolute top-12 left-6 hidden lg:grid" rows={4} cols={6} />
-      <DecorativeDots className="absolute top-12 right-6 hidden lg:grid" rows={4} cols={6} />
+      <DecorativeDots className="absolute top-24 left-6 hidden lg:grid" rows={4} cols={6} />
+      <DecorativeDots className="absolute top-24 right-6 hidden lg:grid" rows={4} cols={6} />
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center">
           <SectionHeading className="mx-auto">{t.projects.heading}</SectionHeading>
