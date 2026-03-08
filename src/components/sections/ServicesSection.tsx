@@ -2,7 +2,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import SectionHeading from "@/components/common/SectionHeading";
 import DecorativeDots from "@/components/common/DecorativeDots";
 import DecorativeTriangle from "@/components/common/DecorativeTriangle";
-import iconStrategy from "@/assets/images/Screenshot 2025-07-02 at 22.34.05.png";
+import iconStrategy from "@/assets/images/icon_strategy.png";
 import iconMedia from "@/assets/images/icon_media.png";
 import iconContent from "@/assets/images/icon_content_and_storytelling.png";
 import iconEvents from "@/assets/images/icon_events.png";
