@@ -36,6 +36,9 @@ const Header: React.FC = () => {
               </li>
             ))}
             <li>
+              <ThemeToggle />
+            </li>
+            <li>
               <LanguageToggle />
             </li>
           </ul>
